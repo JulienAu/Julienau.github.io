@@ -543,7 +543,9 @@
         xPos -= 20;
 
         // Date de naissance
-        doc.text(`${form.naissance.value}`, xPos+4, yPos);
+        const dateNaissance = form.naissance.value;
+        const dateFormatee = dateNaissance ? dateNaissance.split('-').reverse().join('-') : '';
+        doc.text(dateFormatee, xPos+4, yPos);
         yPos += 5;
         xPos += 0;
 
@@ -919,4 +921,5 @@
         </div>
     </footer>
 </body>
+
 </html>
